@@ -17,8 +17,10 @@ public class Athlete {
     public static void main(String[] args) {
     	Athlete one = new Athlete("bob",  7);
     	Athlete two = new Athlete("john", 8);
-    	System.out.println("Here comes "+ one +", with a "+raceStartTime+" start time, and from "+raceLocation+".");
-    	System.out.println("Here comes "+ two +", with a "+raceLocation+" start time, and "+raceStartTime+".");
+    	one.bibNumber=1;
+    	two.bibNumber=2;
+    	System.out.println("Here comes "+ one.bibNumber +", with a "+raceStartTime+" start time, and from "+raceLocation+".");
+    	System.out.println("Here comes "+ two.bibNumber +", with a "+raceLocation+" start time, and "+raceStartTime+".");
         //create two athletes
         //print their names, bibNumbers, and the location of their race. 
     }
