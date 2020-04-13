@@ -3,8 +3,8 @@ package _03_jukebox;
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
-
-
+	
+	
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -16,19 +16,19 @@ import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
-
+	
 /*   If you don't have javazoom.jar in your project, you can download it from here: http://bit.ly/javazoom
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
-
+	
 public class Jukebox implements Runnable {
-
+	
     public void run() {
-
+    	
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
-
+    	
 		// 3. Play the Song
-
+    	
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
 		 * choose which song to play. You can use can use a different button for
@@ -45,16 +45,20 @@ public class Jukebox implements Runnable {
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
 	}
-
+	
 }
-
+	
 class Song {
-
+	
 	private int duration;
 	private String songAddress;
 	private AdvancedPlayer mp3Player;
 	private InputStream songStream;
-
+	
+	
+	Song tong = new Song(Waterfall Sounds For Sleeping - 30 Minutes - Perfect For Sleep & Relaxation.mp3);
+	
+	
 	/**
 	 * Songs can be constructed from files on your computer or Internet
 	 * addresses.
@@ -68,7 +72,7 @@ class Song {
 	public Song(String songAddress) {
 		this.songAddress = songAddress;
 	}
-
+	
 	public void play() {
 		loadFile();
 		if (songStream != null) {
@@ -77,16 +81,16 @@ class Song {
 		} else
 			System.err.println("Unable to load file: " + songAddress);
 	}
-
+	
 	public void setDuration(int seconds) {
 		this.duration = seconds * 100;
 	}
-
+	
 	public void stop() {
 		if (mp3Player != null)
 			mp3Player.close();
 	}
-
+	
 	private void startSong() {
 		Thread t = new Thread() {
 			public void run() {
@@ -101,21 +105,21 @@ class Song {
 		};
 		t.start();
 	}
-
+	
 	private void loadPlayer() {
 		try {
 			this.mp3Player = new AdvancedPlayer(songStream);
 		} catch (Exception e) {
 		}
 	}
-
+	
 	private void loadFile() {
 		if (songAddress.contains("http"))
 			this.songStream = loadStreamFromInternet();
 		else
 			this.songStream = loadStreamFromComputer();
 	}
-
+	
 	private InputStream loadStreamFromInternet() {
 		try {
 			return new URL(songAddress).openStream();
@@ -123,7 +127,7 @@ class Song {
 			return null;
 		}
 	}
-
+	
 	private InputStream loadStreamFromComputer() {
 		try {
 			return new FileInputStream(songAddress);
@@ -132,4 +136,5 @@ class Song {
 		}
 	}
 }
-
+	
+	

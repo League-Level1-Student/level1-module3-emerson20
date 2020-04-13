@@ -16,9 +16,9 @@ public class Backpack {
 		Pencil ten = new Pencil();
 		putInBackpack(ten);
 		Ruler nine = new Ruler();
-		putInBackpack(ruler);
+		putInBackpack(nine);
 		Textbook back = new Textbook();
-		putInBackpack(textbook);
+		putInBackpack(back);
 		getClass();
 		//getSimpleName();
 		//toLowerCase();
