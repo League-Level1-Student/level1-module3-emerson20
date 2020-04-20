@@ -56,7 +56,7 @@ class Song {
 	private InputStream songStream;
 	
 	
-	Song tong = new Song(Waterfall Sounds For Sleeping - 30 Minutes - Perfect For Sleep & Relaxation.mp3);
+	Song tong = new Song("Waterfall_Sounds_For-Sleeping-30_Minutes-Perfect_For_Sleep_&_Relaxation.mp3"); 
 	
 	
 	/**
@@ -65,7 +65,7 @@ class Song {
 	 * 
 	 * Examples: <code> 
 	 * 		new Song("everywhere.mp3"); 	//from default package 
-	 * 		new Song("/Users/joonspoon/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3"); 
+	 * 		new Song("/Users/joonspoon/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3");
 	 * 		new	Song("http://freedownloads.last.fm/download/569264057/Get%2BGot.mp3"); 
 	 * </code>
 	 */
@@ -136,5 +136,4 @@ class Song {
 		}
 	}
 }
-	
-	
+																													
