@@ -43,7 +43,6 @@ public class Jukebox implements Runnable {
 		URL imageURL = getClass().getResource(fileName);
 		Icon icon = new ImageIcon("https://cdn.pixabay.com/photo/2014/04/03/11/55/jukebox-312568_960_720.png");
 		return new JLabel(icon);
-		//String duke = 'https://cdn.pixabay.com/photo/2014/04/03/11/55/jukebox-312568_960_720.png';
 	}				
 	
 }
@@ -59,6 +58,11 @@ class Song {
 	Song tong = new Song("Waterfall_Sounds_For-Sleeping-30_Minutes-Perfect_For_Sleep_&_Relaxation.mp3.http"); 
 	Song bong = new Song("/Users/joonspoon/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3.http");
 
+	public void setTong(Song tong) {
+		this.tong = tong;
+	}public void setBong(Song bong) {
+		this.bong = bong;
+	}
 	/**
 	 * Songs can be constructed from files on your computer or Internet
 	 * addresses.
@@ -82,10 +86,10 @@ class Song {
 			System.err.println("Unable to load file: " + songAddress);
 		
 		tong.loadFile();
-		tong.loadPlayer();
-		tong.startSong();
-		bong.loadPlayer();
 		bong.loadFile();
+		tong.loadPlayer();
+		bong.loadPlayer();
+		tong.startSong();
 		bong.startSong();
 	}
 	
@@ -142,5 +146,5 @@ class Song {
 			return this.getClass().getResourceAsStream(songAddress);
 		}
 	}
-}
+																												   }
 																													
