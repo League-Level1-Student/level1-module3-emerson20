@@ -3,8 +3,8 @@ package _03_jukebox;
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
-	
-	
+
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -55,7 +55,7 @@ class Song {
 	private InputStream songStream;
 	
 	
-	Song tong = new Song("Waterfall_Sounds_For-Sleeping-30_Minutes-Perfect_For_Sleep_&_Relaxation.mp3.http"); 
+	Song tong = new Song("everywhere.mp3"); 
 	Song bong = new Song("/Users/joonspoon/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3.http");
 
 	public void setTong(Song tong) {
@@ -146,5 +146,5 @@ class Song {
 			return this.getClass().getResourceAsStream(songAddress);
 		}
 	}
-																												   }
+	}
 																													
