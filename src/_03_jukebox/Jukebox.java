@@ -22,7 +22,7 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 	
 public class Jukebox implements Runnable {
 	public static void main(String[] args) {
-		//Jukebox jukebox
+		Jukebox box = new Jukebox();
 	}
     public void run() {
     	
