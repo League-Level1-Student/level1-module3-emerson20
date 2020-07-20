@@ -27,10 +27,11 @@ public class Jukebox implements Runnable {
     public void run() {
     	
 		// 1. Find an mp3 on your computer or on the Internet.
+    	//done
 		// 2. Create a Song object for that mp3
-    	
+    	Song s = new Song("C:\\Users\\ralph\\Downloads\\Death Grips - Guillotine.mp3");
 		// 3. Play the Song
-    	
+    	s.play();
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
 		 * choose which song to play. You can use can use a different button for
@@ -38,13 +39,14 @@ public class Jukebox implements Runnable {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+    	
+    	
     }
     
 	/* Use this method to add album covers to your Panel. */
 	private JLabel loadImage(String fileName) {
 		URL imageURL = getClass().getResource(fileName);
-		Icon icon = new ImageIcon("https://cdn.pixabay.com/photo/2014/04/03/11/55/jukebox-312568_960_720.png");
-		return new JLabel(icon);
+		return new JLabel();
 	}				
 	
 }
@@ -57,14 +59,14 @@ class Song {
 	private InputStream songStream;
 	
 	
-	Song tong = new Song("everywhere.mp3"); 
-	Song bong = new Song("/Users/joonspoon/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3.http");
-
-	public void setTong(Song tong) {
-		this.tong = tong;
-	}public void setBong(Song bong) {
-		this.bong = bong;
-	}
+//	Song tong = new Song("everywhere.mp3"); 
+//	Song bong = new Song("/Users/joonspoon/music/Vampire Weekend - Modern Vampires of the City/03 Step.mp3.http");
+//
+//	public void setTong(Song tong) {
+//		this.tong = tong;
+//	}public void setBong(Song bong) {
+//		this.bong = bong;
+//	}
 	/**
 	 * Songs can be constructed from files on your computer or Internet
 	 * addresses.
@@ -86,13 +88,13 @@ class Song {
 			startSong();
 		} else
 			System.err.println("Unable to load file: " + songAddress);
-		
-		tong.loadFile();
-		bong.loadFile();
-		tong.loadPlayer();
-		bong.loadPlayer();
-		tong.startSong();
-		bong.startSong();
+		                                                                             
+//		tong.loadFile();
+//		bong.loadFile();
+//		tong.loadPlayer();
+//		bong.loadPlayer();
+//		tong.startSong();
+//		bong.startSong();
 	}
 	
 	public void setDuration(int seconds) {
@@ -149,4 +151,4 @@ class Song {
 		}
 	}
 	}
-																								
+																								                                           
