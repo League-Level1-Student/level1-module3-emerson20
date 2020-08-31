@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class NetflixQueue {
-	
+	 
 	ArrayList<Movie> movies = new ArrayList<Movie>();
 	
 	public Movie getBestMovie(){

@@ -12,15 +12,21 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 
 
 public class MagicBox extends JPanel implements Runnable, MouseListener {
+	
+	private MediaPalace palace = new MediaPalace();
+
+	
 public static void main(String[] args) {
 	
 }
@@ -89,8 +95,20 @@ public static void main(String[] args) {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
+		
+		
+		
 		System.out.println("asdf");
 		System.out.println(backgroundImage.getRGB(e.getX(), e.getY()));
+		if(backgroundImage.getRGB(e.getX(), e.getY())== -69429) {
+			//palace.speak("hello");
+			
+				JOptionPane.showMessageDialog(null, "You found the spot!");
+				//palace.loadImageFromTheInternet("https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg");
+	
+		}else if (backgroundImage.getRGB(e.getX(), e.getY())== -596032) {
+			JOptionPane.showMessageDialog(null, "You found the spot, again!");
+		}
 		//int color1 = 
 //		if(e.getButton() == 1 && backgroundImage.getRGB(e.getX(), e.getY())==color1) {
 //		
