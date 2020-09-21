@@ -37,7 +37,7 @@ public String getTicketPrice() {
 			return "Don't waste your money on this horrible rubbish.";
 		}
 	}
- 
+
 
 	public int compareTo(Movie otherMovie) {
 		int compareQuantity = otherMovie.getRating();
